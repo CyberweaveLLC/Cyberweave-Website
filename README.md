@@ -1,16 +1,85 @@
-# React + Vite
+# Cyberweave LLC — Official Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Cyberweave](public/images/logo/cyberweave-logo-horizontal.png)
 
-Currently, two official plugins are available:
+The official website for **Cyberweave LLC**, built and maintained by the Cyberweave team.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌐 **Live Website:** https://cyberweave.tech
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Current Version
 
-## Expanding the ESLint configuration
+**Version: 1.0**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Version 1.0 represents the initial public release of the Cyberweave website.
+
+The website currently operates as a single-page experience and provides information about Cyberweave, our services, projects, mission, and contact information.
+
+---
+
+## 🧵 About Cyberweave
+
+Cyberweave LLC is a technology-focused company working across software engineering, technology repair, and innovation.
+
+Our goal is to build technology that makes a difference while continuing to explore new ideas, products, and services.
+
+> **Imagine. Create. Innovate.**
+
+---
+
+## 💻 Website
+
+The current website includes:
+
+- 🏠 Home
+- 🛠️ Services
+- 🚀 Projects
+- 🧵 About / Mission
+- 📬 Contact
+- 📱 Responsive design
+- 🌙 Dark technology-focused design
+- 🔗 Custom domain and HTTPS
+
+The website is currently designed as a single-page application, with additional pages and functionality planned for future versions.
+
+---
+
+## 🛠️ Technology Stack
+
+This website is built using:
+
+- **React**
+- **Vite**
+- **JavaScript**
+- **HTML5**
+- **CSS3**
+- **GitHub Pages**
+- **GitHub Actions**
+
+---
+
+## 📂 Project Structure
+
+```text
+cyberweave-website/
+│
+├── public/
+│   ├── images/
+│   │   ├── hero/
+│   │   └── logo/
+│   └── favicon.ico
+│
+├── src/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
