@@ -17,7 +17,7 @@ export default function Footer() {
 
         <div className="footer-socials">
           <a
-            href="https://www.google.com/search?q=Cyberweave+LLC"
+            href="https://share.google/ufQtWgwDePTtARISL"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Find Cyberweave on Google"
@@ -28,7 +28,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/Cyberweave/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -39,7 +39,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.patreon.com/collection/2324666"
+            href="https://www.patreon.com/cw/CyberweaveLLC"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Support Cyberweave on Patreon"
