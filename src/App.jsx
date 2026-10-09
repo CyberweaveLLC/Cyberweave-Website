@@ -1,27 +1,14 @@
 import "./index.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route, Link, } from "react-router-dom";
+import ScamAwareness from "./pages/ScamAwareness";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
-function App() {
+function HomePage() {
   return (
     <div className="site">
-      <header className="navbar">
-        <a href="/" className="logo">
-          <img
-            src="/images/logo/Cyberweave%20Logo%20Straight%20TRANS.png"
-            alt="Cyberweave"
-          />
-        </a>
-
-        <nav className="nav-links">
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <a href="#contact" className="nav-button">
-          Get Started
-        </a>
-      </header>
+      <Header />
 
       <main>
         <section className="hero">
@@ -122,7 +109,15 @@ function App() {
               </p>
             </div>
 
-            <span className="project-arrow">↗</span>
+            <a
+              href="https://www.patreon.com/collection/2324666"
+              className="project-link project-arrow"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Support UniBench on Patreon"
+            >
+              ↗
+            </a>
           </div>
         </section>
 
@@ -169,15 +164,26 @@ function App() {
         </section>
       </main>
 
-      <footer className="footer">
-        <div>
-          <strong>CYBERWEAVE</strong>
-          <p>Imagine. Create. Innovate.</p>
-        </div>
-
-        <p>© {new Date().getFullYear()} Cyberweave LLC. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/scam-awareness"
+          element={<ScamAwareness />}
+        />
+         <Route
+            path="/privacy-policy"
+            element={<PrivacyPolicy />}
+          />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -42,10 +42,11 @@ a {
   right: 0;
   z-index: 100;
   height: 86px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6%;
+  padding: 15px 4.3%;
   background: rgba(8, 9, 11, 0.82);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -66,6 +67,8 @@ a {
 
 .nav-links {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 34px;
   color: #a1a1aa;
   font-size: 14px;
@@ -73,6 +76,7 @@ a {
 
 .nav-links a {
   transition: color 0.2s ease;
+  font-size: 16px;
 }
 
 .nav-links a:hover {
@@ -84,10 +88,11 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  justify-self: end;
   padding: 12px 20px;
   border-radius: 7px;
   background: #f4f4f5;
-  color: #08090b;
+  color: #000000;
   font-size: 14px;
   font-weight: 700;
   transition:
@@ -411,8 +416,8 @@ a {
 }
 
 .project-arrow {
-  font-size: 42px;
-  color: #8f9299;
+  font-size: 45px;
+  color: #ffffff;
 }
 
 /* MISSION */
@@ -653,4 +658,302 @@ a {
   .hero-image img {
     object-position: center;
   }
+}
+
+/* Scam Awareness */
+
+
+/* ================================
+   SCAM AWARENESS PAGE
+================================ */
+
+.scam-awareness {
+  min-height: 100vh;
+  color: #f4f5f7;
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(65, 91, 145, 0.13), transparent 40%),
+    #08090b;
+}
+
+.scam-awareness a:not(.nav-button):not(.logo) {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.scam-awareness a:hover {
+  color: #ffffff;
+}
+
+.scam-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 110px 40px 90px;
+}
+
+.scam-awareness .eyebrow {
+  margin-bottom: 22px;
+  color: #8ca9d7;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.scam-hero h1 {
+  max-width: 850px;
+  margin: 0 0 24px;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+
+.scam-intro {
+  max-width: 720px;
+  color: #a4acba;
+  font-size: 1.12rem;
+  line-height: 1.9;
+}
+
+.scam-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.scam-actions a:first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1px solid #dce7fb;
+  border-radius: 8px;
+  background: #dce7fb;
+  color: #10141c;
+  font-weight: 700;
+}
+
+.scam-actions a:first-child:hover {
+  background: #ffffff;
+}
+
+.scam-actions a:last-child {
+  padding: 12px 0;
+}
+
+.scam-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 40px;
+  border-top: 1px solid #22252b;
+}
+
+.scam-section h2 {
+  margin: 0 0 34px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.04em;
+}
+
+.scam-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.scam-card {
+  padding: 30px;
+  border: 1px solid #252a33;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #111419, #0b0c0f);
+}
+
+.scam-card h3 {
+  margin: 0 0 14px;
+  font-size: 1.25rem;
+}
+
+.scam-card p,
+.scam-section > p:not(.eyebrow) {
+  color: #a4acba;
+  line-height: 1.85;
+}
+
+.scam-steps {
+  display: grid;
+  gap: 18px;
+  padding-left: 26px;
+  color: #d4d8e0;
+  line-height: 1.8;
+}
+
+.scam-steps li {
+  padding-left: 8px;
+}
+
+.scam-section > a {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.scam-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 40px;
+  border-top: 1px solid #22252b;
+  color: #858d9b;
+  font-size: 0.9rem;
+}
+
+.scam-footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .scam-hero {
+    padding: 80px 24px 65px;
+  }
+
+  .scam-hero h1 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+  }
+
+  .scam-section {
+    padding: 55px 24px;
+  }
+
+  .scam-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scam-footer {
+    padding: 26px 24px;
+    flex-direction: column;
+  }
+}
+
+
+/* Scam Awareness navigation highlight */
+
+.nav-links {
+  gap: 28px;
+}
+
+.nav-links .nav-scam-awareness {
+  margin-left: 16px;
+  padding: 10px 14px;
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  border-radius: 8px;
+  background: rgba(139, 92, 246, 0.10);
+  color: #f5f5f7;
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-links .nav-scam-awareness:hover {
+  background: rgba(139, 92, 246, 0.20);
+  border-color: rgba(167, 139, 250, 0.8);
+  color: #ffffff;
+}
+
+
+.scam-report-action {
+  margin-top: 28px;
+}
+
+.scam-report-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border: 1px solid rgba(139, 92, 246, 0.6);
+  border-radius: 8px;
+  background: rgba(139, 92, 246, 0.14);
+  color: #d7caff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.scam-report-button:hover {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: #a78bfa;
+}
+
+/*Footer styles */
+
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+}
+
+.footer-socials a svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.footer-link {
+  color: #a1a1aa;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-right p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .footer-right {
+    align-items: flex-start;
+  }
+}
+
+.footer-socials .social-google:hover {
+  color: #4285f4;
+}
+
+.footer-socials .social-facebook:hover {
+  color: #1877f2;
+}
+
+.footer-socials .social-patreon:hover {
+  color: #ff424d;
 }
