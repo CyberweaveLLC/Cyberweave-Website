@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route, Link, } from "react-router-dom";
 import ScamAwareness from "./pages/ScamAwareness";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Contact from "./pages/Contact";
 
 function HomePage() {
   return (
@@ -36,7 +37,7 @@ function HomePage() {
                 Explore Cyberweave
               </a>
 
-              <a href="#contact" className="secondary-button">
+              <a href="/contact" className="secondary-button">
                 Contact Us
               </a>
             </div>
@@ -149,17 +150,10 @@ function HomePage() {
           </p>
 
           <a
-            href="mailto:contact@cyberweave.tech"
-            className="primary-button"
-          >
-            contact@cyberweave.tech
-          </a>
-
-          <a
-            href="tel:+17404125481"
+            href="/contact"
             className="secondary-button"
           >
-            Call Cyberweave
+            Contact Us
           </a>
         </section>
       </main>
@@ -169,6 +163,7 @@ function HomePage() {
   );
 }
 
+/* Routes */
 function App() {
   return (
     <BrowserRouter>
@@ -178,10 +173,13 @@ function App() {
           path="/scam-awareness"
           element={<ScamAwareness />}
         />
-         <Route
-            path="/privacy-policy"
-            element={<PrivacyPolicy />}
-          />
+        <Route
+          path="/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+        <Route path="/contact" 
+        element={<Contact />} 
+        />
       </Routes>
     </BrowserRouter>
   );
